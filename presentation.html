@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            overflow: hidden;
+            background: #fff;
+            color: #000;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .content {
+            background: rgba(221, 218, 218, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem;
+            border-radius: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            position: relative;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4facfe;
+        }
+
+        h1 { 
+            font-size: 4rem; 
+            margin: 0 0 2rem 0; 
+            background: linear-gradient(45deg, #00f2fe, #4facfe); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        
+        h2 { 
+            font-size: 3rem; 
+            margin: 0 0 2rem 0; 
+            color: #4facfe; 
+        }
+        
+        p { 
+            font-size: 1.8rem; 
+            line-height: 1.6; 
+            color: #000; 
+            margin: 2rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .icon-container {
+            font-size: 5rem;
+            margin: 2rem 0;
+            color: #4facfe;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .btn {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1.4rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #00f2fe;
+            transform: translateY(-2px);
+        }
+
+        .progress {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            transition: width 0.3s;
+        }
+
+        .bullets {
+            position: fixed;
+            top: 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            padding: 1rem 2rem;
+            background: rgba(0,0,0,0.5);
+            border-radius: 1rem;
+            max-width: 80%;
+            text-align: left;
+        }
+        quote{
+            font-family: 'Stoic Script';
+            font-size: 22px;
+            font-weight: bold;
+            
+        }
+        pre{
+
+    white-space: pre;          /* Preserve whitespace and formatting */
+    font-size: 25px;
+    padding: 10px;             /* Padding around the text */
+
+    border-radius: 4px;        /* Optional rounded corners */
+    text-align: left;          /* Text alignment within the block */
+}
+date{
+    font-size: 24px;
+}
+.top-right-image {
+    position: absolute;  /* Position the image relative to the .content div */
+    top: 10px;           /* Distance from the top edge */
+    right: 10px;         /* Distance from the right edge */
+    width: 200px;         /* Adjust image size */
+    height: auto;        /* Maintain aspect ratio */
+    z-index: 10;         /* Ensure the image is above other content */
+}
+    </style>
+</head>
+<body>
+<div id="slides">
+    <!-- Welcome Slide -->
+    <div class="slide active">
+        <div class="content">
+            <img src="https://i.postimg.cc/C5ThzTL8/image.png" alt="Bali Icon" class="top-right-image">
+            <h1>Startup Success</h1>
+            <div class="icon-container">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <pre>presented by :
+                Rayen Aouechria             Mohamed Aziz Marrei
+                Amine Ben Salem             Sami Ben Slimen
+            </pre>
+            <date>2024-2025</date>
+        </div>
+    </div>
+    
+
+    <!-- Segment 1: Vision and Planning -->
+    <div class="slide">
+        <div class="content">
+            <h2>Segment 1: Vision & Planning</h2>
+            <div class="icon-container">
+                <i class="fas fa-map-signs"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">1</div>
+            <h2>Define Your Vision</h2>
+            <div class="icon-container">
+                <i class="fas fa-binoculars"></i>
+            </div>
+            <p>• Clarify your purpose<br>• Envision your long-term goals<br>• Align vision with market needs</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">2</div>
+            <h2>Market Analysis</h2>
+            <div class="icon-container">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <p>• Research competitors<br>• Identify target demographics<br>• Analyze growth potential</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">3</div>
+            <h2>Goal Setting</h2>
+            <div class="icon-container">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <p>• Create SMART goals<br>• Set short-term milestones<br>• Measure progress consistently</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">4</div>
+            <h2>Business Planning</h2>
+            <div class="icon-container">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <p>• Build a detailed plan<br>• Address financial projections<br>• Prepare for contingencies</p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+        <quote>«The best way to predict the future is to create it.»
+            <br>—— Peter Drucker ——</quote>
+        </div>
+    </div>
+
+    <!-- Segment 2: Building a Strong Foundation -->
+    <div class="slide">
+        <div class="content">
+            <h2>Segment 2: Foundation</h2>
+            <div class="icon-container">
+                <i class="fas fa-tools"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">5</div>
+            <h2>Team Building</h2>
+            <div class="icon-container">
+                <i class="fas fa-users"></i>
+            </div>
+            <p>• Define key roles<br>• Hire skilled professionals<br>• Ensure cultural alignment</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">6</div>
+            <h2>Financial Stability</h2>
+            <div class="icon-container">
+                <i class="fas fa-coins"></i>
+            </div>
+            <p>• Secure funding<br>• Budget for operations<br>• Manage cash flow effectively</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">7</div>
+            <h2>Legal Framework</h2>
+            <div class="icon-container">
+                <i class="fas fa-gavel"></i>
+            </div>
+            <p>• Register your company<br>• Protect intellectual property<br>• Draft contracts</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">8</div>
+            <h2>Brand Development</h2>
+            <div class="icon-container">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <p>• Define brand identity<br>• Build an online presence<br>• Craft a compelling message</p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <quote >«The foundation of any business is trust, and trust is built with consistency.»
+                <br>—— Lincoln Chafee ——</quote >
+        </div>
+    </div>
+    <!-- Segment 3: Execution and Adaptability -->
+    <div class="slide">
+        <div class="content">
+            <h2>Segment 3: Execution</h2>
+            <div class="icon-container">
+                <i class="fas fa-play-circle"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">9</div>
+            <h2>Launch Strategy</h2>
+            <div class="icon-container">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <p>• Define launch timeline<br>• Create marketing assets<br>• Announce strategically</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">10</div>
+            <h2>Sales Tactics</h2>
+            <div class="icon-container">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <p>• Design a sales process<br>• Use CRM tools<br>• Train the team</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">11</div>
+            <h2>Customer Feedback</h2>
+            <div class="icon-container">
+                <i class="fas fa-comments"></i>
+            </div>
+            <p>• Monitor reviews<br>• Conduct surveys<br>• Use insights to improve</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">12</div>
+            <h2>Adaptation</h2>
+            <div class="icon-container">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <p>• Stay flexible<br>• Embrace changes<br>• Innovate consistently</p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <quote >«In the world of business, the ones who are successful are those who are constantly adapting to change and finding opportunity in uncertainty.»
+                <br>—— Richard Branson ——</quote >
+        </div>
+    </div>
+
+    <!-- Segment 4: Legacy and Impact -->
+    <div class="slide">
+        <div class="content">
+            <h2>Segment 4: Legacy</h2>
+            <div class="icon-container">
+                <i class="fas fa-trophy"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">13</div>
+            <h2>Long-term Goals</h2>
+            <div class="icon-container">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <p>• Focus on sustainability<br>• Build enduring relationships<br>• Stay relevant</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">14</div>
+            <h2>Community Impact</h2>
+            <div class="icon-container">
+                <i class="fas fa-hands-helping"></i>
+            </div>
+            <p>• Engage with the community<br>• Support social causes<br>• Share your success</p>
+        </div>
+    </div>
+    
+    <div class="slide">
+        <div class="content">
+            <div class="slide-number">15</div>
+            <h2>Measure Legacy</h2>
+            <div class="icon-container">
+                <i class="fas fa-heart"></i>
+            </div>
+            <p>• Evaluate brand impact<br>• Monitor reputation<br>• Inspire future entrepreneurs</p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <quote>«Legacy is not what I did for myself. It's what I'm doing for the next generation.»
+                <br>—— Vitor Belfort ——</quote>
+        </div>
+    </div>
+    <!-- Thank You Slide -->
+    <div class="slide">
+        <div class="content">
+            <h1>Thank You</h1>
+            <div class="icon-container">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <p>Wishing you success in your entrepreneurial journey.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progress = document.querySelector('.progress');
+
+        function updateSlides() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            progress.style.width = `${(currentSlide / (slides.length - 1)) * 100}%`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        updateSlides();
+    </script>
+</body>
+</html>
+
